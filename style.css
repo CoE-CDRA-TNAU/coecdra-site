@@ -54,3 +54,37 @@ footer {
     padding: 20px 0;
     margin-top: 30px;
 }
+
+/* Collapsible section styles */
+.collapsible {
+    background-color: #0a9396;
+    color: white;
+    cursor: pointer;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.collapsible:hover {
+    background-color: #007b83;
+}
+
+.active {
+    background-color: #007b83;
+}
+
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #e0fbfc;
+    border-left: 3px solid #0a9396;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 15px;
+}
