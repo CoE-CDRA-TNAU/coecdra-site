@@ -1,90 +1,104 @@
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f4f8;
-    margin: 0;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  color: #333;
 }
 
 .container {
-    width: 90%;
-    max-width: 1000px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 header {
-    background: linear-gradient(to right, #005f73, #0a9396);
-    color: white;
-    padding: 30px 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #005f73, #0a9396);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.2rem;
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-header h2 {
-    margin-top: 10px;
-    font-weight: 300;
-    font-size: 1.3rem;
+.header-title {
+  text-align: center;
+  flex: 1;
+}
+
+.header-title h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.header-title h2 {
+  margin-top: 5px;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
 }
 
 main {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 
 h3 {
-    color: #005f73;
-    border-bottom: 2px solid #94d2bd;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+  color: #005f73;
+  border-bottom: 2px solid #94d2bd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 ul {
-    padding-left: 20px;
-    list-style: disc;
+  padding-left: 20px;
+  list-style: disc;
 }
 
 footer {
-    background: #005f73;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
+  background: #005f73;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
 }
 
 /* Collapsible section styles */
 .collapsible {
-    background-color: #0a9396;
-    color: white;
-    cursor: pointer;
-    padding: 14px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 16px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+  background-color: #0a9396;
+  color: white;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 .collapsible:hover {
-    background-color: #007b83;
+  background-color: #007b83;
 }
 
 .active {
-    background-color: #007b83;
+  background-color: #007b83;
 }
 
 .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #e0fbfc;
-    border-left: 3px solid #0a9396;
-    border-radius: 0 0 5px 5px;
-    margin-bottom: 15px;
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #e0fbfc;
+  border-left: 3px solid #0a9396;
+  border-radius: 0 0 5px 5px;
+  margin-bottom: 15px;
 }
