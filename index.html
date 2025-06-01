@@ -11,8 +11,15 @@
       document.querySelectorAll(".collapsible").forEach(button => {
         button.addEventListener("click", () => {
           const content = button.nextElementSibling;
-          content.style.display = content.style.display === "block" ? "none" : "block";
           button.classList.toggle("active");
+          const icon = button.querySelector(".icon");
+          icon.classList.toggle("rotate");
+
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
         });
       });
     });
@@ -30,15 +37,36 @@
     </div>
   </header>
 
+  <!-- Navigation -->
+  <nav class="navbar container">
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#objectives">Objectives</a></li>
+      <li><a href="#workplan">Work Plan</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h1>Building Resilient Agriculture for the Future</h1>
+      <p>Towards a climate-smart, disaster-ready farming ecosystem in Southern India.</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
   <main class="container">
-    <section>
-      <button class="collapsible"><i class="fas fa-info-circle"></i> About CoE CDRA</button>
+    <section id="about">
+      <button class="collapsible"><i class="fas fa-info-circle icon"></i> About CoE CDRA</button>
       <div class="content">
         <p>Climate change induced increasing temperatures and heatwaves lead to changes in rainfall patterns, severe and frequent storms and increased drought. Future climate projections are anticipated to adversely affect biodiversity, crop yields and food security worldwide...</p>
       </div>
     </section>
-    <section>
-      <button class="collapsible"><i class="fas fa-bullseye"></i> Objectives</button>
+
+    <section id="objectives">
+      <button class="collapsible"><i class="fas fa-bullseye icon"></i> Objectives</button>
       <div class="content">
         <ul>
           <li>Understand climatic risk and vulnerability in agriculture under current and future climate.</li>
@@ -48,14 +76,16 @@
         </ul>
       </div>
     </section>
-    <section>
-      <button class="collapsible"><i class="fas fa-project-diagram"></i> Work Plan</button>
+
+    <section id="workplan">
+      <button class="collapsible"><i class="fas fa-project-diagram icon"></i> Work Plan</button>
       <div class="content">
         <p>The proposal includes climate risk assessments, sustainable food systems, stakeholder capacity building, and science-policy linkage.</p>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 DST - Centre of Excellence on Climate and Disaster Resilient Agriculture</p>
   </footer>
